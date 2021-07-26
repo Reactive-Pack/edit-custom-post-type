@@ -21,6 +21,6 @@ export function importEditPostPackage(gutenbergVersion, editorOptions) {
     return import(
         /* webpackChunkName: "edit-custom-post-type/[request]" */
         /* webpackMode: "lazy" */
-        `@reactive-pack/edit-custom-post-type/edit-post-${gutenbergVersion}v`
+        `@reactive-pack/edit-custom-post-type-${gutenbergVersion}v`
     );
 }
