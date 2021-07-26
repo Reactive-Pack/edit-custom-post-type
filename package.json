@@ -1,5 +1,5 @@
 {
-  "name": "edit-custom-post-type",
+  "name": "@reactive-pack/edit-custom-post-type",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
