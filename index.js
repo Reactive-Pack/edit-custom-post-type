@@ -17,6 +17,6 @@ export async function importEditPostPackage(gutenbergVersion) {
     return await import(
         /* webpackChunkName: "edit-custom-post-type/[request]" */
         /* webpackMode: "lazy" */
-        `edit-custom-post-type/edit-post-${gutenbergVersion}v`
+        `@reactive-pack/edit-custom-post-type/edit-post-${gutenbergVersion}v`
     );
 }
