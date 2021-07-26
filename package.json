@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "devDependencies": {
+    "@reactive-pack/edit-custom-post-type-store": "file:packages/store",
+    "@wordpress/data": "^5.2.0"
+  },
   "author": "",
   "license": "ISC"
 }

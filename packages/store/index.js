@@ -1,0 +1,1 @@
+export { store, STORE_KEY } from './store';
