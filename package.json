@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@reactive-pack/edit-custom-post-type-store": "git+https://github.com/Reactive-Pack/edit-custom-post-type-store.git",
     "@wordpress/data": "^5.2.0"
+  },
+  "dependencies": {
+    "@reactive-pack/edit-custom-post-type-store": "git+https://github.com/Reactive-Pack/edit-custom-post-type-store.git"
   },
   "author": "",
   "license": "ISC"
