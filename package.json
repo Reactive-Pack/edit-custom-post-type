@@ -10,6 +10,7 @@
     "@wordpress/data": "^5.2.0"
   },
   "dependencies": {
+    "@reactive-pack/edit-custom-post-type-10.7v": "git+https://github.com/Reactive-Pack/edit-custom-post-type-editor.git#10.7v",
     "@reactive-pack/edit-custom-post-type-store": "git+https://github.com/Reactive-Pack/edit-custom-post-type-store.git"
   },
   "author": "",
