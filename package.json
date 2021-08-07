@@ -4,14 +4,46 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild:packages": "npm run clean:packages && lerna run build",
+    "clean:packages": "rimraf \"./packages/*/@(build|build-module|build-style)\"",
+    "build:packages": "node ./bin/packages/build.js",
+    "build": "rimraf \"./build\" && npm run build:packages && wp-scripts build",
+    "install": "npm run build"
   },
   "devDependencies": {
-    "@wordpress/data": "^5.2.0"
+    "@babel/core": "^7.14.8",
+    "@emotion/babel-plugin": "^11.3.0",
+    "@reactive-pack/edit-custom-post-type-store": "file:packages/store",
+    "@wordpress/babel-preset-default": "^6.3.0",
+    "@wordpress/custom-templated-path-webpack-plugin": "^2.1.0",
+    "@wordpress/data": "^5.2.0",
+    "@wordpress/dependency-extraction-webpack-plugin": "^3.2.0",
+    "@wordpress/library-export-default-webpack-plugin": "^2.1.0",
+    "@wordpress/readable-js-assets-webpack-plugin": "^1.0.0",
+    "@wordpress/scripts": "^17.0.0",
+    "babel-plugin-inline-json-import": "^0.3.2",
+    "chalk": "^4.1.1",
+    "child_process": "^1.0.2",
+    "copy-webpack-plugin": "6.4.0",
+    "execa": "^5.1.1",
+    "fast-glob": "^3.2.7",
+    "lerna": "^4.0.0",
+    "lodash": "^4.17.21",
+    "make-dir": "^3.1.0",
+    "node-watch": "^0.7.1",
+    "postcss": "^8.3.6",
+    "progress": "^2.0.3",
+    "sass": "^1.36.0",
+    "terser-webpack-plugin": "3.0.3",
+    "typescript": "^4.3.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "4.46.0",
+    "webpack-bundle-analyzer": "4.2.0",
+    "worker-farm": "^1.7.0"
   },
   "dependencies": {
-    "@reactive-pack/edit-custom-post-type-10.7v": "git+https://github.com/Reactive-Pack/edit-custom-post-type-editor.git#10.7v",
-    "@reactive-pack/edit-custom-post-type-store": "git+https://github.com/Reactive-Pack/edit-custom-post-type-store.git"
+    "edit-post-10.7": "file:packages/edit-post-10.7",
+    "edit-post-10.7-original": "file:packages/edit-post-10.7-original"
   },
   "author": "",
   "license": "ISC"
